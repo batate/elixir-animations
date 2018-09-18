@@ -9,12 +9,11 @@ defmodule Animate do
   end
   
   def run(module, time, drop\\0) do
-    frames = 
-      module
-      |> frames
-      |> String.split("=====\n")
-      |> Enum.drop(drop)
-      |> Enum.each(&display(&1, time))
+    module
+    |> frames
+    |> String.split("=====\n")
+    |> Enum.drop(drop)
+    |> Enum.each(&display(&1, time))
   end
   
   def display(frame, time) do

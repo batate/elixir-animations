@@ -1,41 +1,185 @@
 defmodule Reduce do
   def frames() do
 """
+
+              |           |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |           |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R          |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E        |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D      |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U    |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U C  |
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U C E|
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U C E|
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U C E|
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
+
+              |R E D U C E|
+              +-----------+
+              | 1 2   +   |
+              | 3 4   -   |
+              |       =   |
+
+
+=====
             
-    1         |           |
-    3         +-----------+
-  + 4         | 1 2   +   |
-  ---         | 3 4   -   |
+              |R E D U C E|
+              +-----------+
+              |  IT   +   |
+              | 3 4   -   |
               |       =   |
 
     
 =====
             
-    1         |           |
-    3         +-----------+
-  + 4         | 1 2   +   |
-  ---         | 3 4   -   |
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              | 3 4   -   |
               |       =   |
 
     
 =====
             
-    1         |           |
-    3         +-----------+
-  + 4         | 1 2   +   |
-  ---         | 3 4   -   |
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              |  ADDS -   |
               |       =   |
 
     
 =====
             
-    1         |           |
-    3         +-----------+
-  + 4         | 1 2   +   |
-  ---         | 3 4   -   |
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              |  ADDS UP  |
               |       =   |
 
-    
+
+=====
+            
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              |  ADDS UP! |
+              |           |
+
+
+=====
+            
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              |  ADDS UP! |
+              |           |
+
+
+=====
+            
+              |R E D U C E|
+              +-----------+
+              |  IT ALL   |
+              |  ADDS UP! |
+              |           |
+
+
+=====
+            
+    1         |R E D U C E|
+    3         +-----------+
+  + 4         |  IT ALL   |
+  ---         |  ADDS UP! |
+              |           |
+
+
+=====
+            
+    1         |R E D U C E|
+    3         +-----------+
+  + 4         |  IT ALL   |
+  ---         |  ADDS UP! |
+              |           |
+
+
 =====
            
     1         |           |
@@ -416,6 +560,78 @@ enumerable    |accumulator|
 
 =====
   
+  plus =    x +  y
+   
+
+
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is
+
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from
+
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from enumerable
+
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from enumerable
+  y is
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from enumerable
+  y is accumulator
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from enumerable
+  y is accumulator
+
+
+
+=====
+  
+  plus =    x +  y
+   
+  x is from enumerable
+  y is accumulator
+
+
+
+=====
+  
   plus =  ( x +  y) 
    
 
@@ -543,7 +759,7 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     enumerable,   
-    function, 
+    accumulator, 
   
   )
 
@@ -552,8 +768,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     enumerable,   
-    function, 
-    accumulator
+    accumulator, 
+    function
   )
 
 
@@ -561,8 +777,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     enumerable,   
-    function, 
-    accumulator
+    accumulator, 
+    function
   )
 
 
@@ -570,8 +786,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     enumerable,   
-    function, 
-    accumulator
+    accumulator, 
+    function
   )
 
 
@@ -579,8 +795,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    function, 
-    accumulator
+    accumulator, 
+    function
   )
 
 
@@ -588,8 +804,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    function, 
-    accumulator
+    accumulator, 
+    function
   )
 
 
@@ -597,8 +813,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    accumulator
+    0, 
+    function
   )
 
 
@@ -606,8 +822,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    accumulator
+    0, 
+    function
   )
 
 
@@ -615,8 +831,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -624,8 +840,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -633,8 +849,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -642,8 +858,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    
+     , 
+    plus
   )
 
 
@@ -651,8 +867,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -660,8 +876,8 @@ enumerable    |accumulator|
   
   Enum.reduce( 
     [1, 3, 4],   
-    plus, 
-    
+     , 
+    plus
   )
 
 
@@ -669,8 +885,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -678,8 +894,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [ , 3, 4],   
-        , 
-    0
+    0, 
+    
   )
 
 
@@ -687,8 +903,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],   
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -696,8 +912,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [ , 3, 4],   
-        , 
-    0
+    0, 
+    
   )
 
 
@@ -705,8 +921,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -714,8 +930,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1,  , 4],            |> plus(1)
-        , 
-    0
+    0, 
+
   )
 
 
@@ -723,8 +939,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus, 
-    0
+    0, 
+    plus
   )
 
 
@@ -732,8 +948,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1,  , 4],            |> plus(1)
-        , 
-    0
+    0, 
+    
   )
 
 
@@ -741,8 +957,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus,                 |> plus(3)
-    0
+    0,                    |> plus(3)
+    plus
   )
 
 
@@ -750,8 +966,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3,  ],            |> plus(1)
-        ,                 |> plus(3)
-    0
+    0,                    |> plus(3)
+     
   )
 
 
@@ -759,8 +975,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus,                 |> plus(3)
-    0
+    0,                    |> plus(3)
+    plus
   )
 
 
@@ -768,8 +984,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3,  ],            |> plus(1)
-        ,                 |> plus(3)
-    0
+    0,                    |> plus(3)
+    
   )
 
 
@@ -777,8 +993,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -786,8 +1002,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            |> plus(1)
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -795,8 +1011,8 @@ enumerable    |accumulator|
   
   Enum.reduce(            0
     [1, 3, 4],            |> plus(1)
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -804,8 +1020,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            plus(0, 1)
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -813,8 +1029,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            plus(0, 1)
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -822,8 +1038,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            1
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -831,8 +1047,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -840,8 +1056,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            1
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -849,8 +1065,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -858,8 +1074,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            1
-    plus,                 |> plus(3)
-    0                     |> plus(4)
+    0,                    |> plus(3)
+    plus                  |> plus(4)
   )
 
 
@@ -867,8 +1083,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 plus(1, 3)
-    0                     |> plus(4)
+    0,                    plus(1, 3)
+    plus                  |> plus(4)
   )
 
 
@@ -876,8 +1092,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 plus(1, 3)
-    0                     |> plus(4)
+    0,                    plus(1, 3)
+    plus                  |> plus(4)
   )
 
 
@@ -885,8 +1101,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 4
-    0                     |> plus(4)
+    0,                    4
+    plus                  |> plus(4)
   )
 
 
@@ -894,8 +1110,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     |> plus(4)
+    0,                 
+    plus                  |> plus(4)
   )
 
 
@@ -903,8 +1119,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 4
-    0                     |> plus(4)
+    0,                    4
+    plus                  |> plus(4)
   )
 
 
@@ -912,8 +1128,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                  
-    0                     |> plus(4)
+    0, 
+    plus                  |> plus(4)
   )
 
 
@@ -921,8 +1137,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 4
-    0                     |> plus(4)
+    0,                    4
+    plus                  |> plus(4)
   )
 
 
@@ -930,8 +1146,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     plus(4, 4)
+    0,                 
+    plus                  plus(4, 4)
   )
 
 
@@ -939,8 +1155,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     plus(4, 4)
+    0, 
+    plus                  |> plus(4)
   )
 
 
@@ -948,8 +1164,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     8
+    0, 
+    plus                  8
   )
 
 
@@ -957,8 +1173,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     8
+    0, 
+    plus                  8
   )
 
 
@@ -966,8 +1182,8 @@ enumerable    |accumulator|
   
   Enum.reduce(             
     [1, 3, 4],            
-    plus,                 
-    0                     8
+    0, 
+    plus                  8
   )
 
 
@@ -975,8 +1191,8 @@ enumerable    |accumulator|
   
 
     [1, 3, 4],            
-    plus,                 
-    0                     8
+    0, 
+    plus                  8
   )
 
 
@@ -984,8 +1200,8 @@ enumerable    |accumulator|
   
 
 
-    plus,                 
-    0                     8
+    0, 
+    plus                  8
   )
 
 
